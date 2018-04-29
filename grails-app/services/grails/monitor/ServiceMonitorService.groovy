@@ -12,6 +12,7 @@ interface ServiceMonitorService {
 
     Long count()
 
+	@Publisher
     void delete(Serializable id)
 
 	@Publisher

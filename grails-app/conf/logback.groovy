@@ -1,9 +1,11 @@
-import grails.util.BuildSettings
-import grails.util.Environment
+import java.nio.charset.Charset
+
 import org.springframework.boot.logging.logback.ColorConverter
 import org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter
 
-import java.nio.charset.Charset
+import ch.qos.logback.classic.encoder.PatternLayoutEncoder
+import grails.util.BuildSettings
+import grails.util.Environment
 
 conversionRule 'clr', ColorConverter
 conversionRule 'wex', WhitespaceThrowableProxyConverter
@@ -34,3 +36,4 @@ if (Environment.isDevelopmentMode() && targetDir != null) {
     logger("StackTrace", ERROR, ['FULL_STACKTRACE'], false)
 }
 root(ERROR, ['STDOUT'])
+logger("grails.monitor", INFO, ['STDOUT'])
