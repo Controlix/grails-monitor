@@ -25,6 +25,13 @@ repositories {
     maven { url "https://repo.grails.org/grails/core" }
 }
 
+eclipse {
+	classpath {
+		downloadJavadoc = true
+		downloadSources = true
+	}
+}
+
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-logging"
     compile "org.springframework.boot:spring-boot-autoconfigure"
@@ -47,6 +54,7 @@ dependencies {
     compile "org.hibernate:hibernate-core:5.1.5.Final"
     compile "org.grails.plugins:gsp"
 	compile "com.typesafe.akka:akka-actor_2.12:2.5.12"
+	compile "javax.inject:javax.inject:1"
     console "org.grails:grails-console"
     profile "org.grails.profiles:web"
     runtime "org.glassfish.web:el-impl:2.1.2-b03"

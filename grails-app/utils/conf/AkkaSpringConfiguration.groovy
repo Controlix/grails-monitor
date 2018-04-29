@@ -5,6 +5,7 @@ import static conf.SpringExtension.SpringExtProvider
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.ApplicationContext
 import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.ComponentScan
 import org.springframework.context.annotation.Configuration
 
 import com.typesafe.config.Config
@@ -17,6 +18,7 @@ import akka.actor.ActorSystem
  * Spring to scan the 'grakka' package for @Component classes.
  */
 @Configuration
+@ComponentScan("grails.monitor")
 class AkkaSpringConfiguration {
 
   // the application context is needed to initialize the Akka Spring Extension
