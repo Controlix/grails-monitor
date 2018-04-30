@@ -36,4 +36,7 @@ if (Environment.isDevelopmentMode() && targetDir != null) {
     logger("StackTrace", ERROR, ['FULL_STACKTRACE'], false)
 }
 root(ERROR, ['STDOUT'])
-logger("grails.monitor", INFO, ['STDOUT'])
+if (Environment.isDevelopmentMode()) {
+	logger("conf", DEBUG, ['STDOUT'], false)
+}
+logger("grails.monitor", INFO, ['STDOUT'], false)

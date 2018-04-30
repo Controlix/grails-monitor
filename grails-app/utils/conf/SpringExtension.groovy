@@ -51,8 +51,8 @@ class SpringExtension extends
      * @param actorBeanName The name of the actor bean to create Props for
      * @return a Props that will create the named actor bean using Spring
      */
-    public Props props(String actorBeanName) {
-      return Props.create(SpringActorProducer.class, applicationContext, actorBeanName);
+    public Props props(String actorBeanName, Object... constructorArguments) {
+      return Props.create(SpringActorProducer.class, applicationContext, actorBeanName, constructorArguments);
     }
   }
 }
