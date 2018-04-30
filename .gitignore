@@ -13,3 +13,5 @@ out/
 
 bin/
 !gradle-wrapper.jar
+*.db
+
