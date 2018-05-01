@@ -15,7 +15,7 @@ import akka.actor.ActorSystem
 
 /**
  * AkkaSpringConfiguration defines the Akka actor system as Spring bean and asks
- * Spring to scan the 'grakka' package for @Component classes.
+ * Spring to scan the 'grails.monitor' package for @Component classes.
  */
 @Configuration
 @ComponentScan("grails.monitor")
@@ -43,5 +43,4 @@ class AkkaSpringConfiguration {
   public Config akkaConfiguration() {
     return ConfigFactory.load("actor-system");
   }
-
 }

@@ -36,7 +36,7 @@ class MonitorService {
 
 		// describe the properties of the desired actor
 		def actorType = "MonitorActor"
-		Props props = SpringExtProvider.get(actorSystem).props(actorType)
+		Props props = SpringExtProvider.get(actorSystem).props(actorType, serviceMonitor)
 
 		// ask akka to create the actor
 		// use unique actor name because this will be an ephemeral, stateless actor

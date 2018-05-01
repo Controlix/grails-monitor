@@ -8,6 +8,11 @@ grails:
             # Whether to translate GORM events into Reactor events
             # Disabled by default for performance reasons
             events: false
+    dropwizard:
+        metrics:
+            reporterFrequency: 7 # report every 7 seconds
+            console-reporter:
+                active: true
 info:
     app:
         name: '@info.app.name@'
