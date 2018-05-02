@@ -38,5 +38,5 @@ if (Environment.isDevelopmentMode() && targetDir != null) {
 root(ERROR, ['STDOUT'])
 if (Environment.isDevelopmentMode()) {
 	logger("conf", DEBUG, ['STDOUT'], false)
+    logger("grails.monitor", DEBUG, ['STDOUT'], false)
 }
-logger("grails.monitor", INFO, ['STDOUT'], false)
